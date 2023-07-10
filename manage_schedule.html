@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Schedule</title>
+    <link rel="stylesheet" href="manage_schedule.css">
+</head>
+
+<body>
+    <header class="header">
+        <div>Logo</div>
+        <div><select name="cinema-name" id="cinema-select">
+                <option value="">Quảng Ninh</option>
+            </select></div>
+        <div>Ticket Sale & Revenue</div>
+        <div>Admin name</div>
+    </header>
+    <div class="container">
+        <div style="display: flex; justify-content: space-around; margin-top: 30px;" class="select-container">
+            <select name="week" id="week">
+                <option value="" selected hien>Choose Week</option>
+            </select>
+            <button id="create-btn"
+                style="border-radius: 5px;background-color: #619cbc; border: none; color: white;">Create
+                Schedule</button>
+        </div>
+
+        <div class="table-container">
+            <div class="movie-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Movie Name</th>
+                            <th>Duration</th>
+                            <th>Delay</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="movie-name" draggable="true">Fast X</td>
+                            <td class="time">2:00</td>
+                            <td>0:20</td>
+                        </tr>
+                        <tr>
+                            <td class="movie-name" draggable="true">Advenger: End game</td>
+                            <td class="time">2:35</td>
+                            <td>0:20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="schedule-container">
+                <div id="monday" class="day">
+                    <h4>Monday</h4>
+                    
+                </div>
+                <div id="tuesday" class="day">
+                    <h4>Tuesday</h4>
+                </div>
+                <div id="wednesday" class="day">
+                    <h4>Wednesday</h4>
+                </div>
+                <div id="thursday" class="day">
+                    <h4>Thursday</h4>
+                </div>
+                <div id="friday" class="day">
+                    <h4>Friday</h4>
+                </div>
+                <div id="saturday" class="day">
+                    <h4>Saturday</h4>
+                </div>
+                <div id="sunday" class="day">
+                    <h4>Sunday</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Create schedule</h3>
+            <h4>Start Delay</h4>
+            <input type="number" min="0" max="30">
+            <h4>Status</h4>
+            <select name="Status" id="">
+                <option value="1">Open</option>
+                <option value="0">Close</option>
+            </select>
+            <h4>Choose day in week</h4>
+            <select name="day" id="day">
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+                <option value="sunday">Sunday</option>
+            </select>
+            <h4>Start Time</h4>
+            <input type="time" id="start-time" placeholder="Please choose start time">
+            <h4>End sime</h4> 
+            <input type="time" id="end-time" placeholder="Please choose end time">
+            <h4>Room</h4>
+            <select name="Status" id="">
+                <option value="" selected>-- Choose room --</option>
+                <option value="">Room 1</option>
+                <option value="">Room 2</option>
+            </select>
+            <button id="create-schedule">Create Schedule</button>
+            
+               
+           
+        </div>
+
+    </div>
+</body>
+<script src="manage_schedule.js"></script>
+
+</html>
